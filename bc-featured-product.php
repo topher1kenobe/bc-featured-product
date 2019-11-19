@@ -149,9 +149,6 @@ class BC_Featured_Product {
 		} else {
 			echo '<p>';
 			esc_html_e( 'No products found, ', 'wp-featured-products' );
-			//echo '<a href="' . esc_url( admin_url( 'edit.php?post_type=bigcommerce_product'  ) ) . '">';
-			//esc_html_e( 'let\'s go make some!', 'wp-featured-products' );
-			//echo '</a></p>';
 		}
 
 	}
