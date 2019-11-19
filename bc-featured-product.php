@@ -115,7 +115,7 @@ class BC_Featured_Product {
 		wp_nonce_field( 'wp-featured-products', 'wp_featured_products_nonce' );
 
 		// go get the meta field
-		$wpfs_meta_value = get_post_meta( $post->ID, '_bc_featured_product', true );
+		$bcp_meta_value = get_post_meta( $post->ID, '_bc_featured_product', true );
 
 		// Display the form, using the current value.
 
@@ -143,7 +143,7 @@ class BC_Featured_Product {
 			echo '<select name="_bc_featured_product">' . "\n";
 			echo '<option value="">' . __( 'Please choose', 'wp-featured-products' ) . '</option>' . "\n";
 			foreach ( $products as $key => $product ) {
-				echo '<option value="' . absint( $product->ID ) . '"' . selected( $wpfs_meta_value, $product->ID, false ) . '>' . esc_html( $product->post_title ) . '</option>' . "\n";
+				echo '<option value="' . absint( $product->ID ) . '"' . selected( $bcp_meta_value, $product->ID, false ) . '>' . esc_html( $product->post_title ) . '</option>' . "\n";
 			}
 			echo '</select>' . "\n";
 		} else {
