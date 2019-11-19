@@ -28,7 +28,8 @@ This section describes how to install the plugin and get it working.
 
 Page or Post meta has a key called `_bc_featured_product`.	A very simple way to render the slider is like this:
 
-```<?php
+```
+<?php
     $featured = get_post_meta( get_the_ID(), '_bc_featured_product', true );
 
     if (
@@ -38,7 +39,8 @@ Page or Post meta has a key called `_bc_featured_product`.	A very simple way to 
     ) {
         echo do_shortcode( '[bigcommerce_product post_id=' . absint( $featured ) . ']' );
     }
-?>```
+?>
+```
 
 ## Frequently Asked Questions ##
 
