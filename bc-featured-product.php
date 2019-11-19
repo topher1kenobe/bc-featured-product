@@ -9,7 +9,6 @@
  * Text Domain: wp-featured-bc-product
  */
 
-
 /**
  * Provides a mechanism for associating a WordPress Menu with a Page or Post
  *
@@ -17,13 +16,6 @@
  * @since BC_Featured_Product 1.0
  * @author Topher
  */
-
-
-/**
- * Instantiate the BC_Featured_Product instance
- * @since BC_Featured_Product 1.0
- */
-add_action( 'plugins_loaded', array( 'BC_Featured_Product', 'instance' ) );
 
 /**
  * Main BC Featured Products Class
@@ -194,11 +186,17 @@ class BC_Featured_Product {
 		$wp_featured_product = sanitize_text_field( $_POST['_bc_featured_product'] );
 
 		// Update or create the key/value
-		update_post_meta( $post_id, '_bc_featured_product', $wp_featured_product );
+		update_post_meta( $post_id, '_bc_featured_product', absint( $wp_featured_product ) );
 
 	}
 
 	// end class
 }
+
+/**
+ * Instantiate the BC_Featured_Product instance
+ * @since BC_Featured_Product 1.0
+ */
+add_action( 'plugins_loaded', array( 'BC_Featured_Product', 'instance' ) );
 
 ?>
