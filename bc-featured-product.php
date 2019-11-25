@@ -10,7 +10,7 @@
  */
 
 /**
- * Provides a mechanism for associating a WordPress Menu with a Page or Post
+ * Provides a mechanism for associating a BigCommerce Product with a Page or Post
  *
  * @package BC_Featured_Product
  * @since BC_Featured_Product 1.0
