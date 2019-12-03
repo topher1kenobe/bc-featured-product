@@ -111,7 +111,7 @@ class BC_Featured_Product {
 
 		global $post;
 
-		// Add an nonce field so we can check for it later.
+		// Add a nonce field so we can check for it later.
 		wp_nonce_field( 'wp-featured-products', 'wp_featured_products_nonce' );
 
 		// go get the meta field
