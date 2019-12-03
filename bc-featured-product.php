@@ -118,7 +118,6 @@ class BC_Featured_Product {
 		$bcp_meta_value = get_post_meta( $post->ID, '_bc_featured_product', true );
 
 		// Display the form, using the current value.
-
 		echo '<p>';
 		esc_html_e( 'Please choose from the existing products below.  If you need to create a new Product, please go to ', 'wp-featured-products' );
 		echo '<a href="' . esc_url( 'https://login.bigcommerce.com/' ) . '">';
@@ -137,8 +136,7 @@ class BC_Featured_Product {
 		// The Query
 		$products = get_posts( $args );
 
-
-		// make sure we have some
+		// make sure we have results
 		if ( count( $products ) > 0 ) {
 			echo '<select name="_bc_featured_product">' . "\n";
 			echo '<option value="">' . __( 'Please choose', 'wp-featured-products' ) . '</option>' . "\n";
