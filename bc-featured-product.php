@@ -176,7 +176,7 @@ class BC_Featured_Product {
 			return $post_id;
 		}
 
-        // check to see if our input is an integer, so our absint doesn't save a 0
+        // check to see if our input is numeric, so our absint doesn't save a 0
         if ( is_numeric( $_POST['_bc_featured_product'] ) ) {
 		    // Update or create the key/value
 		    update_post_meta( $post_id, '_bc_featured_product', absint( $_POST['_bc_featured_product'] ) );
